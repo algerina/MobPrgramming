@@ -1,76 +1,54 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Cats and Mouse
+Two cats and a mouse are at various positions on a line. You will be given their starting positions. Your task is to determine which cat will reach the mouse first, assuming the mouse does not move and the cats travel at equal speed. If the cats arrive at the same time, the mouse will be allowed to move and it will escape while they fight.
 
-> One paragraph statement about the project.
+You are given  queries in the form of , , and  representing the respective positions for cats  and , and for mouse . Complete the function  to return the appropriate answer to each query, which will be printed on a new line.
 
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+If cat  catches the mouse first, print Cat A.
+If cat  catches the mouse first, print Cat B.
+If both cats reach the mouse at the same time, print Mouse C as the two cats fight and mouse escapes.
+Example
 
 
 
-## Authors
 
-👤 **Author1**
+The cats are at positions  (Cat A) and  (Cat B), and the mouse is at position . Cat B, at position  will arrive first since it is only  unit away while the other is  units away. Return 'Cat B'.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+Function Description
 
-👤 **Author2**
+Complete the catAndMouse function in the editor below.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+catAndMouse has the following parameter(s):
 
-## 🤝 Contributing
+int x: Cat 's position
+int y: Cat 's position
+int z: Mouse 's position
+Returns
 
-Contributions, issues, and feature requests are welcome!
+string: Either 'Cat A', 'Cat B', or 'Mouse C'
+Input Format
 
-Feel free to check the [issues page](../../issues/).
+The first line contains a single integer, , denoting the number of queries.
+Each of the  subsequent lines contains three space-separated integers describing the respective values of  (cat 's location),  (cat 's location), and  (mouse 's location).
 
-## Show your support
+Constraints
 
-Give a ⭐️ if you like this project!
+Sample Input 0
 
-## Acknowledgments
+2
+1 2 3
+1 3 2
+Sample Output 0
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+Cat B
+Mouse C
+Explanation 0
 
-## 📝 License
+Query 0: The positions of the cats and mouse are shown below: image
 
-This project is [MIT](./MIT.md) licensed.
+Cat  will catch the mouse first, so we print Cat B on a new line.
+
+Query 1: In this query, cats  and  reach mouse  at the exact same time: image
+
+Because the mouse escapes, we print Mouse C on a new line.
